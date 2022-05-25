@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.1.32421.90
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{620DD709-5506-4517-B88B-31D28997122D}"
+	ProjectSection(SolutionItems) = preProject
+		docs\README.md = docs\README.md
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8386F967-2BBE-4985-B249-1DA5D5E64C3D}"
 EndProject
@@ -12,6 +15,11 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelingSystemForHCSLibrary", "src\ModelingSystemForHCSLibrary\ModelingSystemForHCSLibrary.csproj", "{F5A00618-1226-49A0-A45E-75C721954543}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelingSystemForHCSLibraryTests", "tests\ModelingSystemForHCSLibraryTests\ModelingSystemForHCSLibraryTests.csproj", "{3E768F93-6067-4D8F-AE5A-661495168A61}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{DE3AFCC4-8924-4F1B-A9AE-ED4A7472D19F}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
