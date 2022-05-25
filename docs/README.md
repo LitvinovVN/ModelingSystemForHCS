@@ -2,4 +2,4 @@
 
 Для хранения документации к проекту.
 
-<a name="doxygen\html\index.html">Документация doxygen</a>
+[Документация doxygen](doxygen\html\index.html)
