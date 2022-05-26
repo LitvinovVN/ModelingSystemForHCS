@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ModelingSystemForHCSLibrary.Grid
 {
-    public class Grid3D
+    public class Grid3DFragment
     {
     }
 }

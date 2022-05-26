@@ -8,7 +8,7 @@ namespace ModelingSystemForHCSLibraryTests
         [Fact]
         public void Test1()
         {
-            Grid3D grid = new();
+            Grid3DFragment grid = new();
 
 
         }
