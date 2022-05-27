@@ -1,4 +1,5 @@
 ﻿using ModelingSystemForHCSLibrary.Arrays;
+using ModelingSystemForHCSLibrary.Grid;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,8 +18,14 @@ namespace ModelingSystemForHCSLibraryTests
             LinearArray3D<double> array1 = new(data);
             
             Assert.NotNull(array1);
-            Assert.InRange(3,6,3);
-            
+            Assert.Equal(2, array1.GetDimentions().X);
+            Assert.Equal(2, array1.GetDimentions().Y);
+            Assert.Equal(3, array1.GetDimentions().Z);
+
+            var val = data[1,0,2];
+            Assert.Equal(val, array1.GetValue(1,0,2));
+            array1.SetValue(0, 1, 2, 33);
+            Assert.Equal(33, array1.GetValue(0,1,2));
 
         }
     }
