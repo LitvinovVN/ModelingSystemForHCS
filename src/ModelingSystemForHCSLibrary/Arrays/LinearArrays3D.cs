@@ -13,7 +13,7 @@ namespace ModelingSystemForHCSLibrary.Arrays
     /// </summary>
     public class LinearArrays3D
     {
-        Dictionary<ModelDataName, LinearArray3D<double>> data=new();
+        Dictionary<ModelDataName, LinearArray3dRAM<double>> data=new();
 
 
 

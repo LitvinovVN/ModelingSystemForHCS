@@ -4,11 +4,16 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
 
   <ItemGroup>
     <Folder Include="Cluster\" />
     <Folder Include="Geometry\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ILGPU" Version="1.2.0" />
   </ItemGroup>
 
 </Project>

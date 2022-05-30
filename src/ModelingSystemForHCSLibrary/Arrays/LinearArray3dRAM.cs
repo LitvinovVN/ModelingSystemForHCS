@@ -8,13 +8,22 @@ using System.Threading.Tasks;
 
 namespace ModelingSystemForHCSLibrary.Arrays
 {
-    public class LinearArray3D<T>
+    /// <summary>
+    /// Класс для работы с массивом 3D в оперативной памяти RAM
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    public class LinearArray3dRAM<T> : ILinearArray3D<T>
     {
         T[,,] _linearArray;
 
-        public LinearArray3D(T[,,] linearArray)
+        public LinearArray3dRAM(T[,,] linearArray)
         {
             _linearArray = linearArray;
+        }
+
+        public LinearArray3dRAM(int nx, int ny, int nz)
+        {
+            _linearArray = new T[nx, ny, nz];
         }
 
         /// <summary>
@@ -31,14 +40,30 @@ namespace ModelingSystemForHCSLibrary.Arrays
             return dimentions;
         }
 
+        /// <summary>
+        /// Возвращает элемент трёхмерного массива по заданным координатам
+        /// </summary>
+        /// <param name="X"></param>
+        /// <param name="Y"></param>
+        /// <param name="Z"></param>
+        /// <returns></returns>
         public T GetValue(int X, int Y, int Z)
         {
             return _linearArray[X, Y, Z];
         }
 
+        /// <summary>
+        /// Записывает в элемент массива с заданными координатами значение value
+        /// </summary>
+        /// <param name="X"></param>
+        /// <param name="Y"></param>
+        /// <param name="Z"></param>
+        /// <param name="value"></param>
         public void SetValue(int X, int Y, int Z, T value)
         {
             _linearArray[X, Y, Z]=value;
         }
+
+
     }
 }
