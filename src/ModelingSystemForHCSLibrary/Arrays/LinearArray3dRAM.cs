@@ -23,7 +23,7 @@ namespace ModelingSystemForHCSLibrary.Arrays
 
         public LinearArray3dRAM(int nx, int ny, int nz)
         {
-            _linearArray = new T[nx, ny, nz];
+            _linearArray = new T[nz, ny, nx];
         }
 
         /// <summary>
@@ -34,9 +34,9 @@ namespace ModelingSystemForHCSLibrary.Arrays
         public Data3D<int> GetDimentions()
         {
             Data3D<int> dimentions = new();
-            dimentions.X = _linearArray.GetUpperBound(0) + 1;
+            dimentions.Z = _linearArray.GetUpperBound(0) + 1;
             dimentions.Y = _linearArray.GetUpperBound(1) + 1; ;
-            dimentions.Z = _linearArray.GetUpperBound(2) + 1; ;
+            dimentions.X = _linearArray.GetUpperBound(2) + 1; ;
             return dimentions;
         }
 
@@ -49,7 +49,7 @@ namespace ModelingSystemForHCSLibrary.Arrays
         /// <returns></returns>
         public T GetValue(int X, int Y, int Z)
         {
-            return _linearArray[X, Y, Z];
+            return _linearArray[Z, Y, X];
         }
 
         /// <summary>
@@ -61,9 +61,9 @@ namespace ModelingSystemForHCSLibrary.Arrays
         /// <param name="value"></param>
         public void SetValue(int X, int Y, int Z, T value)
         {
-            _linearArray[X, Y, Z]=value;
+            _linearArray[Z, Y, X]=value;
         }
 
-
+        
     }
 }

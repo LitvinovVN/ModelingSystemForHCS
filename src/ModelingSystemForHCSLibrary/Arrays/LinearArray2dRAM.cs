@@ -20,14 +20,14 @@ namespace ModelingSystemForHCSLibrary.Arrays
 
         public LinearArray2dRAM(int n1, int n2, PlaneName planeName = PlaneName.XY)
         {
-            _linearArray = new T[n1, n2];
+            _linearArray = new T[n2, n1];
             _planeName = planeName;
         }
 
         /// <summary>
         /// Возвращает название плоскости
         /// </summary>
-        public PlaneName PlaneName { get { return _planeName; } }
+        public PlaneName PlaneName { get { return _planeName; } }        
 
         /// <summary>
         /// Возвращает размерность двумерного массива
@@ -37,8 +37,8 @@ namespace ModelingSystemForHCSLibrary.Arrays
         public Data2D<int> GetDimentions()
         {
             Data2D<int> dimentions = new();
-            dimentions.N1 = _linearArray.GetUpperBound(0) + 1;
-            dimentions.N2 = _linearArray.GetUpperBound(1) + 1; ;
+            dimentions.N2 = _linearArray.GetUpperBound(0) + 1;
+            dimentions.N1 = _linearArray.GetUpperBound(1) + 1; ;
             return dimentions;
         }
 
@@ -50,7 +50,7 @@ namespace ModelingSystemForHCSLibrary.Arrays
         /// <returns></returns>
         public T GetValue(int N1, int N2)
         {
-            return _linearArray[N1, N2];
+            return _linearArray[N2, N1];
         }
 
         /// <summary>
@@ -61,7 +61,7 @@ namespace ModelingSystemForHCSLibrary.Arrays
         /// <param name="value"></param>
         public void SetValue(int N1, int N2, T value)
         {
-            _linearArray[N1, N2] = value;
+            _linearArray[N2, N1] = value;
         }
 
 

@@ -28,6 +28,21 @@ namespace ModelingSystemForHCSLibrary.Arrays
             _buffer.MemSetToZero();            
         }
 
+        public LinearArray3dGPU(T[,,] array)
+            : this(array.GetLength(2), array.GetLength(1), array.GetLength(0))
+        {
+            for(int k = 0; k < array.GetLength(0); k++)
+            {
+                for(int j = 0; j < array.GetLength(1); j++)
+                {
+                    for(int i = 0; i < array.GetLength(2); i++)
+                    {
+                        SetValue(i, j, k, array[k, j, i]);
+                    }
+                }
+            }
+        }
+
         ~LinearArray3dGPU()
         {
             Dispose();

@@ -1,4 +1,5 @@
-﻿using ModelingSystemForHCSLibrary.Grid;
+﻿using ModelingSystemForHCSLibrary.Enums;
+using ModelingSystemForHCSLibrary.Grid;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -53,6 +54,82 @@ namespace ModelingSystemForHCSLibrary.Arrays
             var dataSizeInMb = (double)GetNumElements() * sizeof(T) / 1024 / 1024;
             return dataSizeInMb;
         }
-        
+
+        /// <summary>
+        /// Возвращает двумерный массив по указанной плоскости planName
+        /// и номеру среза sliceNumber
+        /// </summary>
+        /// <param name="planName"></param>
+        /// <param name="sliceNumber"></param>
+        /// <returns></returns>
+        public LinearArray2dRAM<T> GetSlice(PlaneName planeName, int sliceNumber)
+        {
+            int n1 = 0;
+            int n2 = 0;
+
+
+            switch (planeName)
+            {
+                case PlaneName.XY:
+                    {
+                        n1 = GetDimentions().X;
+                        n2 = GetDimentions().Y;
+                    }
+                    break;
+                case PlaneName.XZ:
+                    {
+                        n1 = GetDimentions().X;
+                        n2 = GetDimentions().Z;
+                    }
+                    break;
+                case PlaneName.YZ:
+                    {
+                        n1 = GetDimentions().Y;
+                        n2 = GetDimentions().Z;
+                    }
+                    break;
+            }
+
+            LinearArray2dRAM<T> array = new(n1, n2);
+
+            if (planeName == PlaneName.XY)
+            {
+                for (int j = 0; j < n2; j++)
+                {
+                    for (int i = 0; i < n1; i++)
+                    {
+                        var value = GetValue(i, j, sliceNumber);
+                        array.SetValue(i,j,value);
+                    }                        
+                }                    
+            }
+
+            if (planeName == PlaneName.XZ)
+            {
+                for (int k = 0; k < n2; k++)
+                {
+                    for (int i = 0; i < n1; i++)
+                    {
+                        var value = GetValue(i, sliceNumber, k);
+                        array.SetValue(i, k, value);
+                    }
+                }
+            }
+
+            if (planeName == PlaneName.YZ)
+            {
+                for (int k = 0; k < n2; k++)
+                {
+                    for (int j = 0; j < n1; j++)
+                    {
+                        var value = GetValue(sliceNumber, j, k);
+                        array.SetValue(j, k, value);
+                    }
+                }
+            }
+
+            return array;
+        }
+
     }
 }
