@@ -1,0 +1,201 @@
+\hypertarget{interface_modeling_system_for_h_c_s_library_1_1_arrays_1_1_i_linear_array3_d}{}\doxysection{Modeling\+System\+For\+HCSLibrary.\+Arrays.\+ILinear\+Array3D\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Interface Template Reference}
+\label{interface_modeling_system_for_h_c_s_library_1_1_arrays_1_1_i_linear_array3_d}\index{ModelingSystemForHCSLibrary.Arrays.ILinearArray3D$<$ T $>$@{ModelingSystemForHCSLibrary.Arrays.ILinearArray3D$<$ T $>$}}
+
+
+Inheritance diagram for Modeling\+System\+For\+HCSLibrary.\+Arrays.\+ILinear\+Array3D\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{interface_modeling_system_for_h_c_s_library_1_1_arrays_1_1_i_linear_array3_d__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_modeling_system_for_h_c_s_library_1_1_grid_1_1_data3_d}{Data3D}}$<$ int $>$ \mbox{\hyperlink{interface_modeling_system_for_h_c_s_library_1_1_arrays_1_1_i_linear_array3_d_affb74acb24964d415b3d7a34521cfbf6}{Get\+Dimentions}} ()
+\begin{DoxyCompactList}\small\item\em Возвращает размерность трёхмерного массива \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{interface_modeling_system_for_h_c_s_library_1_1_arrays_1_1_i_linear_array3_d_ace8ba2f655eb3b4c5d78bd9094819d58}{Get\+Value}} (int X, int Y, int Z)
+\begin{DoxyCompactList}\small\item\em Возвращает элемент трёхмерного массива по заданным координатам \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_modeling_system_for_h_c_s_library_1_1_arrays_1_1_i_linear_array3_d_a95a9223ab186c79cd30a84cf22fe845c}{Set\+Value}} (int X, int Y, int Z, T value)
+\begin{DoxyCompactList}\small\item\em Записывает в элемент массива с заданными координатами значение value \end{DoxyCompactList}\item 
+long \mbox{\hyperlink{interface_modeling_system_for_h_c_s_library_1_1_arrays_1_1_i_linear_array3_d_aa0507f3359efaf39e2626ac9aaf4bea6}{Get\+Num\+Elements}} ()
+\begin{DoxyCompactList}\small\item\em Возвращает количество элементов трёхмерного массива \end{DoxyCompactList}\item 
+unsafe double \mbox{\hyperlink{interface_modeling_system_for_h_c_s_library_1_1_arrays_1_1_i_linear_array3_d_aa2cc5515d806c4f48d9f6b038836479b}{Get\+Data\+Size\+In\+Mb$<$ T $>$}} ()
+\begin{DoxyCompactList}\small\item\em Возвращает размер объекта в Mb \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_modeling_system_for_h_c_s_library_1_1_arrays_1_1_linear_array2d_r_a_m}{Linear\+Array2d\+RAM}}$<$ T $>$ \mbox{\hyperlink{interface_modeling_system_for_h_c_s_library_1_1_arrays_1_1_i_linear_array3_d_a763a3b31f79522389425a60283a0015c}{Get\+Slice}} (\mbox{\hyperlink{namespace_modeling_system_for_h_c_s_library_1_1_enums_a9a9422b45c99afde5ffc898e9aff6dcd}{Plane\+Name}} plane\+Name, int slice\+Number)
+\begin{DoxyCompactList}\small\item\em Возвращает двумерный массив по указанной плоскости plan\+Name и номеру среза slice\+Number \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_modeling_system_for_h_c_s_library_1_1_arrays_1_1_i_linear_array3_d_aa2cc5515d806c4f48d9f6b038836479b}\label{interface_modeling_system_for_h_c_s_library_1_1_arrays_1_1_i_linear_array3_d_aa2cc5515d806c4f48d9f6b038836479b}} 
+\index{ModelingSystemForHCSLibrary.Arrays.ILinearArray3D$<$ T $>$@{ModelingSystemForHCSLibrary.Arrays.ILinearArray3D$<$ T $>$}!GetDataSizeInMb$<$ T $>$@{GetDataSizeInMb$<$ T $>$}}
+\index{GetDataSizeInMb$<$ T $>$@{GetDataSizeInMb$<$ T $>$}!ModelingSystemForHCSLibrary.Arrays.ILinearArray3D$<$ T $>$@{ModelingSystemForHCSLibrary.Arrays.ILinearArray3D$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GetDataSizeInMb$<$ T $>$()}{GetDataSizeInMb< T >()}}
+{\footnotesize\ttfamily unsafe double \mbox{\hyperlink{interface_modeling_system_for_h_c_s_library_1_1_arrays_1_1_i_linear_array3_d}{Modeling\+System\+For\+HCSLibrary.\+Arrays.\+ILinear\+Array3D}}$<$ T $>$.Get\+Data\+Size\+In\+Mb$<$ T $>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Возвращает размер объекта в Mb 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em unmanaged}]\end{description}
+\end{Desc}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{interface_modeling_system_for_h_c_s_library_1_1_arrays_1_1_i_linear_array3_d_aa2cc5515d806c4f48d9f6b038836479b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{interface_modeling_system_for_h_c_s_library_1_1_arrays_1_1_i_linear_array3_d_affb74acb24964d415b3d7a34521cfbf6}\label{interface_modeling_system_for_h_c_s_library_1_1_arrays_1_1_i_linear_array3_d_affb74acb24964d415b3d7a34521cfbf6}} 
+\index{ModelingSystemForHCSLibrary.Arrays.ILinearArray3D$<$ T $>$@{ModelingSystemForHCSLibrary.Arrays.ILinearArray3D$<$ T $>$}!GetDimentions@{GetDimentions}}
+\index{GetDimentions@{GetDimentions}!ModelingSystemForHCSLibrary.Arrays.ILinearArray3D$<$ T $>$@{ModelingSystemForHCSLibrary.Arrays.ILinearArray3D$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GetDimentions()}{GetDimentions()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_modeling_system_for_h_c_s_library_1_1_grid_1_1_data3_d}{Data3D}}$<$ int $>$ \mbox{\hyperlink{interface_modeling_system_for_h_c_s_library_1_1_arrays_1_1_i_linear_array3_d}{Modeling\+System\+For\+HCSLibrary.\+Arrays.\+ILinear\+Array3D}}$<$ T $>$.Get\+Dimentions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Возвращает размерность трёхмерного массива 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_modeling_system_for_h_c_s_library_1_1_arrays_1_1_linear_array3d_g_p_u_a4310137d91f1597df5f2ccdecf6b7994}{Modeling\+System\+For\+HCSLibrary.\+Arrays.\+Linear\+Array3d\+GPU$<$ T $>$}}, and \mbox{\hyperlink{class_modeling_system_for_h_c_s_library_1_1_arrays_1_1_linear_array3d_r_a_m_ae213eb454dc317db3b65258ce2d37d3e}{Modeling\+System\+For\+HCSLibrary.\+Arrays.\+Linear\+Array3d\+RAM$<$ T $>$}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{interface_modeling_system_for_h_c_s_library_1_1_arrays_1_1_i_linear_array3_d_affb74acb24964d415b3d7a34521cfbf6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{interface_modeling_system_for_h_c_s_library_1_1_arrays_1_1_i_linear_array3_d_aa0507f3359efaf39e2626ac9aaf4bea6}\label{interface_modeling_system_for_h_c_s_library_1_1_arrays_1_1_i_linear_array3_d_aa0507f3359efaf39e2626ac9aaf4bea6}} 
+\index{ModelingSystemForHCSLibrary.Arrays.ILinearArray3D$<$ T $>$@{ModelingSystemForHCSLibrary.Arrays.ILinearArray3D$<$ T $>$}!GetNumElements@{GetNumElements}}
+\index{GetNumElements@{GetNumElements}!ModelingSystemForHCSLibrary.Arrays.ILinearArray3D$<$ T $>$@{ModelingSystemForHCSLibrary.Arrays.ILinearArray3D$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GetNumElements()}{GetNumElements()}}
+{\footnotesize\ttfamily long \mbox{\hyperlink{interface_modeling_system_for_h_c_s_library_1_1_arrays_1_1_i_linear_array3_d}{Modeling\+System\+For\+HCSLibrary.\+Arrays.\+ILinear\+Array3D}}$<$ T $>$.Get\+Num\+Elements (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Возвращает количество элементов трёхмерного массива 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{interface_modeling_system_for_h_c_s_library_1_1_arrays_1_1_i_linear_array3_d_aa0507f3359efaf39e2626ac9aaf4bea6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{interface_modeling_system_for_h_c_s_library_1_1_arrays_1_1_i_linear_array3_d_aa0507f3359efaf39e2626ac9aaf4bea6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{interface_modeling_system_for_h_c_s_library_1_1_arrays_1_1_i_linear_array3_d_a763a3b31f79522389425a60283a0015c}\label{interface_modeling_system_for_h_c_s_library_1_1_arrays_1_1_i_linear_array3_d_a763a3b31f79522389425a60283a0015c}} 
+\index{ModelingSystemForHCSLibrary.Arrays.ILinearArray3D$<$ T $>$@{ModelingSystemForHCSLibrary.Arrays.ILinearArray3D$<$ T $>$}!GetSlice@{GetSlice}}
+\index{GetSlice@{GetSlice}!ModelingSystemForHCSLibrary.Arrays.ILinearArray3D$<$ T $>$@{ModelingSystemForHCSLibrary.Arrays.ILinearArray3D$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GetSlice()}{GetSlice()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_modeling_system_for_h_c_s_library_1_1_arrays_1_1_linear_array2d_r_a_m}{Linear\+Array2d\+RAM}}$<$ T $>$ \mbox{\hyperlink{interface_modeling_system_for_h_c_s_library_1_1_arrays_1_1_i_linear_array3_d}{Modeling\+System\+For\+HCSLibrary.\+Arrays.\+ILinear\+Array3D}}$<$ T $>$.Get\+Slice (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_modeling_system_for_h_c_s_library_1_1_enums_a9a9422b45c99afde5ffc898e9aff6dcd}{Plane\+Name}}}]{plane\+Name,  }\item[{int}]{slice\+Number }\end{DoxyParamCaption})}
+
+
+
+Возвращает двумерный массив по указанной плоскости plan\+Name и номеру среза slice\+Number 
+
+
+\begin{DoxyParams}{Parameters}
+{\em plan\+Name} & \\
+\hline
+{\em slice\+Number} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{interface_modeling_system_for_h_c_s_library_1_1_arrays_1_1_i_linear_array3_d_a763a3b31f79522389425a60283a0015c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{interface_modeling_system_for_h_c_s_library_1_1_arrays_1_1_i_linear_array3_d_ace8ba2f655eb3b4c5d78bd9094819d58}\label{interface_modeling_system_for_h_c_s_library_1_1_arrays_1_1_i_linear_array3_d_ace8ba2f655eb3b4c5d78bd9094819d58}} 
+\index{ModelingSystemForHCSLibrary.Arrays.ILinearArray3D$<$ T $>$@{ModelingSystemForHCSLibrary.Arrays.ILinearArray3D$<$ T $>$}!GetValue@{GetValue}}
+\index{GetValue@{GetValue}!ModelingSystemForHCSLibrary.Arrays.ILinearArray3D$<$ T $>$@{ModelingSystemForHCSLibrary.Arrays.ILinearArray3D$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GetValue()}{GetValue()}}
+{\footnotesize\ttfamily T \mbox{\hyperlink{interface_modeling_system_for_h_c_s_library_1_1_arrays_1_1_i_linear_array3_d}{Modeling\+System\+For\+HCSLibrary.\+Arrays.\+ILinear\+Array3D}}$<$ T $>$.Get\+Value (\begin{DoxyParamCaption}\item[{int}]{X,  }\item[{int}]{Y,  }\item[{int}]{Z }\end{DoxyParamCaption})}
+
+
+
+Возвращает элемент трёхмерного массива по заданным координатам 
+
+
+\begin{DoxyParams}{Parameters}
+{\em X} & \\
+\hline
+{\em Y} & \\
+\hline
+{\em Z} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_modeling_system_for_h_c_s_library_1_1_arrays_1_1_linear_array3d_g_p_u_a7efca1462ae5b0066be9f16e1effa754}{Modeling\+System\+For\+HCSLibrary.\+Arrays.\+Linear\+Array3d\+GPU$<$ T $>$}}, and \mbox{\hyperlink{class_modeling_system_for_h_c_s_library_1_1_arrays_1_1_linear_array3d_r_a_m_a0189c2f02c75a1f8f5cd006f675fdb0d}{Modeling\+System\+For\+HCSLibrary.\+Arrays.\+Linear\+Array3d\+RAM$<$ T $>$}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{interface_modeling_system_for_h_c_s_library_1_1_arrays_1_1_i_linear_array3_d_ace8ba2f655eb3b4c5d78bd9094819d58_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{interface_modeling_system_for_h_c_s_library_1_1_arrays_1_1_i_linear_array3_d_a95a9223ab186c79cd30a84cf22fe845c}\label{interface_modeling_system_for_h_c_s_library_1_1_arrays_1_1_i_linear_array3_d_a95a9223ab186c79cd30a84cf22fe845c}} 
+\index{ModelingSystemForHCSLibrary.Arrays.ILinearArray3D$<$ T $>$@{ModelingSystemForHCSLibrary.Arrays.ILinearArray3D$<$ T $>$}!SetValue@{SetValue}}
+\index{SetValue@{SetValue}!ModelingSystemForHCSLibrary.Arrays.ILinearArray3D$<$ T $>$@{ModelingSystemForHCSLibrary.Arrays.ILinearArray3D$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{SetValue()}{SetValue()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{interface_modeling_system_for_h_c_s_library_1_1_arrays_1_1_i_linear_array3_d}{Modeling\+System\+For\+HCSLibrary.\+Arrays.\+ILinear\+Array3D}}$<$ T $>$.Set\+Value (\begin{DoxyParamCaption}\item[{int}]{X,  }\item[{int}]{Y,  }\item[{int}]{Z,  }\item[{T}]{value }\end{DoxyParamCaption})}
+
+
+
+Записывает в элемент массива с заданными координатами значение value 
+
+
+\begin{DoxyParams}{Parameters}
+{\em X} & \\
+\hline
+{\em Y} & \\
+\hline
+{\em Z} & \\
+\hline
+{\em value} & \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_modeling_system_for_h_c_s_library_1_1_arrays_1_1_linear_array3d_g_p_u_aaed9b5127589c2905a1c64e10e926025}{Modeling\+System\+For\+HCSLibrary.\+Arrays.\+Linear\+Array3d\+GPU$<$ T $>$}}, and \mbox{\hyperlink{class_modeling_system_for_h_c_s_library_1_1_arrays_1_1_linear_array3d_r_a_m_a09787a8e1f783e5ef8a23dc709b26a9d}{Modeling\+System\+For\+HCSLibrary.\+Arrays.\+Linear\+Array3d\+RAM$<$ T $>$}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/! My\+Projects/\+Modeling\+System\+For\+HCS/src/\+Modeling\+System\+For\+HCSLibrary/\+Arrays/\mbox{\hyperlink{_i_linear_array3_d_8cs}{ILinear\+Array3\+D.\+cs}}\end{DoxyCompactItemize}

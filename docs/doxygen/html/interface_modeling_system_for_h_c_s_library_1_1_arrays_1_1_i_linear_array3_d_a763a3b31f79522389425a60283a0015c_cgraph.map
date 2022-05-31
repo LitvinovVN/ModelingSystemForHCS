@@ -1,0 +1,6 @@
+<map id="ModelingSystemForHCSLibrary.Arrays.ILinearArray3D.GetSlice" name="ModelingSystemForHCSLibrary.Arrays.ILinearArray3D.GetSlice">
+<area shape="rect" id="node1" title="Возвращает двумерный массив по указанной плоскости planName и номеру среза sliceNumber" alt="" coords="5,71,213,112"/>
+<area shape="rect" id="node2" href="$interface_modeling_system_for_h_c_s_library_1_1_arrays_1_1_i_linear_array3_d.html#affb74acb24964d415b3d7a34521cfbf6" title="Возвращает размерность трёхмерного массива" alt="" coords="261,5,500,47"/>
+<area shape="rect" id="node3" href="$interface_modeling_system_for_h_c_s_library_1_1_arrays_1_1_i_linear_array3_d.html#ace8ba2f655eb3b4c5d78bd9094819d58" title="Возвращает элемент трёхмерного массива по заданным координатам" alt="" coords="277,71,485,112"/>
+<area shape="rect" id="node4" href="$class_modeling_system_for_h_c_s_library_1_1_arrays_1_1_linear_array2d_r_a_m.html#a1370b3ef874ae6d00f9fdbef7c7352e4" title="Записывает в элемент массива с заданными координатами значение value" alt="" coords="265,136,496,177"/>
+</map>

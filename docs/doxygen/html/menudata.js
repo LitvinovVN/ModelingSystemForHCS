@@ -26,9 +26,26 @@ var menudata={children:[
 {text:"Main Page",url:"index.html"},
 {text:"Related Pages",url:"pages.html"},
 {text:"Packages",url:"namespaces.html",children:[
-{text:"Packages",url:"namespaces.html"}]},
+{text:"Packages",url:"namespaces.html"},
+{text:"Package Functions",url:"namespacemembers.html",children:[
+{text:"All",url:"namespacemembers.html"},
+{text:"Enumerations",url:"namespacemembers_enum.html"}]}]},
 {text:"Classes",url:"annotated.html",children:[
 {text:"Class List",url:"annotated.html"},
-{text:"Class Index",url:"classes.html"}]},
+{text:"Class Index",url:"classes.html"},
+{text:"Class Hierarchy",url:"inherits.html"},
+{text:"Class Members",url:"functions.html",children:[
+{text:"All",url:"functions.html",children:[
+{text:"d",url:"functions.html#index_d"},
+{text:"g",url:"functions.html#index_g"},
+{text:"l",url:"functions.html#index_l"},
+{text:"n",url:"functions.html#index_n"},
+{text:"p",url:"functions.html#index_p"},
+{text:"s",url:"functions.html#index_s"},
+{text:"x",url:"functions.html#index_x"},
+{text:"y",url:"functions.html#index_y"},
+{text:"z",url:"functions.html#index_z"}]},
+{text:"Functions",url:"functions_func.html"},
+{text:"Properties",url:"functions_prop.html"}]}]},
 {text:"Files",url:"files.html",children:[
 {text:"File List",url:"files.html"}]}]}
