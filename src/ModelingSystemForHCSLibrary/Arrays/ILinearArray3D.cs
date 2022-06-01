@@ -44,17 +44,7 @@ namespace ModelingSystemForHCSLibrary.Arrays
             long NumElements = Dim.X * Dim.Y * Dim.Z;
             return NumElements;
         }
-
-        /// <summary>
-        /// Возвращает размер объекта в Mb
-        /// </summary>
-        /// <returns></returns>
-        unsafe double GetDataSizeInMb<T>() where T : unmanaged
-        {
-            var dataSizeInMb = (double)GetNumElements() * sizeof(T) / 1024 / 1024;
-            return dataSizeInMb;
-        }
-
+                
         /// <summary>
         /// Возвращает размер объекта в указанных единицах измерения
         /// </summary>

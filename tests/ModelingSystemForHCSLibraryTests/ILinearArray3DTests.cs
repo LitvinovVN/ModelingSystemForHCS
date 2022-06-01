@@ -98,7 +98,7 @@ namespace ModelingSystemForHCSLibraryTests
         public void TestILinearArray3D()
         {
             ILinearArray3D<double> array3 = new LinearArray3dRAM<double>(100, 100, 50);
-            Assert.Equal(3.814697265625, array3.GetDataSizeInMb<double>(), 12);
+            Assert.Equal(3.814697265625, array3.GetDataSize<double>(DataMeasurementUnit.MBytes), 12);
         }
 
         /// <summary>
