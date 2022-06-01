@@ -55,19 +55,16 @@ namespace ModelingSystemForHCSLibrary.Arrays
             return dataSizeInMb;
         }
 
+
         /// <summary>
-        /// Возвращает двумерный массив по указанной плоскости planName
-        /// и номеру среза sliceNumber
+        /// Возвращает размерность среза трёхмерного массива по указанной плоскости
         /// </summary>
-        /// <param name="planName"></param>
-        /// <param name="sliceNumber"></param>
-        /// <returns></returns>
-        public LinearArray2dRAM<T> GetSlice(PlaneName planeName, int sliceNumber)
+        /// <param name="planeName">Наименование плоскости</param>
+        /// <returns>Размерность среза</returns>
+        Data2D<int> GetDimensionsOfPlane(PlaneName planeName)
         {
             int n1 = 0;
             int n2 = 0;
-
-
             switch (planeName)
             {
                 case PlaneName.XY:
@@ -90,6 +87,23 @@ namespace ModelingSystemForHCSLibrary.Arrays
                     break;
             }
 
+            return new Data2D<int>(n1, n2);
+        }
+
+        /// <summary>
+        /// Возвращает двумерный массив по указанной плоскости planeName
+        /// и номеру среза sliceNumber
+        /// </summary>
+        /// <param name="planeName"></param>
+        /// <param name="sliceNumber"></param>
+        /// <returns></returns>
+        LinearArray2dRAM<T> GetSlice(PlaneName planeName, int sliceNumber)
+        {
+            int n1, n2;
+            var dimOfPlane = GetDimensionsOfPlane(planeName);
+            n1 = dimOfPlane.N1;
+            n2 = dimOfPlane.N2;
+
             LinearArray2dRAM<T> array = new(n1, n2);
 
             if (planeName == PlaneName.XY)
@@ -99,9 +113,9 @@ namespace ModelingSystemForHCSLibrary.Arrays
                     for (int i = 0; i < n1; i++)
                     {
                         var value = GetValue(i, j, sliceNumber);
-                        array.SetValue(i,j,value);
-                    }                        
-                }                    
+                        array.SetValue(i, j, value);
+                    }
+                }
             }
 
             if (planeName == PlaneName.XZ)
@@ -129,6 +143,64 @@ namespace ModelingSystemForHCSLibrary.Arrays
             }
 
             return array;
+        }
+
+        
+
+        /// <summary>
+        /// Записывает двумерный массив по указанной плоскости planeName
+        /// и номеру среза sliceNumber
+        /// </summary>
+        /// <param name="planeName"></param>
+        /// <param name="sliceNumber"></param>
+        /// <param name="linearArray2D"></param>
+        void SetSlice(PlaneName planeName, int sliceNumber, LinearArray2dRAM<T> linearArray2D)
+        {
+            int n1, n2;
+            var dimOfPlane = GetDimensionsOfPlane(planeName);
+            n1 = dimOfPlane.N1;
+            n2 = dimOfPlane.N2;
+
+            if (linearArray2D.GetDimentions().N1 != n1)
+                throw new Exception("Размерности массивов не совпадают!");
+            if (linearArray2D.GetDimentions().N2 != n2)
+                throw new Exception("Размерности массивов не совпадают!");
+
+            if (planeName == PlaneName.XY)
+            {
+                for (int j = 0; j < n2; j++)
+                {
+                    for (int i = 0; i < n1; i++)
+                    {
+                        var value = linearArray2D.GetValue(i, j);
+                        SetValue(i, j, sliceNumber, value);
+                    }
+                }
+            }
+
+            if (planeName == PlaneName.XZ)
+            {
+                for (int k = 0; k < n2; k++)
+                {
+                    for (int i = 0; i < n1; i++)
+                    {
+                        var value = linearArray2D.GetValue(i, k);
+                        SetValue(i, sliceNumber, k, value);
+                    }
+                }
+            }
+
+            if (planeName == PlaneName.YZ)
+            {
+                for (int k = 0; k < n2; k++)
+                {
+                    for (int j = 0; j < n1; j++)
+                    {
+                        var value = linearArray2D.GetValue(j, k);
+                        SetValue(sliceNumber, j, k, value);
+                    }
+                }
+            }
         }
 
     }
