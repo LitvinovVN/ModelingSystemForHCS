@@ -51,7 +51,7 @@ namespace ModelingSystemForHCSLibrary.Arrays
         {
             return _linearArray[Z, Y, X];
         }
-
+        
         /// <summary>
         /// Записывает в элемент массива с заданными координатами значение value
         /// </summary>

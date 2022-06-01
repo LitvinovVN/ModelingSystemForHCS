@@ -55,6 +55,29 @@ namespace ModelingSystemForHCSLibrary.Arrays
             return dataSizeInMb;
         }
 
+        /// <summary>
+        /// Возвращает размер объекта в указанных единицах измерения
+        /// </summary>
+        /// <param name="dataMeasurementUnit"></param>
+        /// <returns></returns>
+        unsafe double GetDataSize<T>(DataMeasurementUnit dataMeasurementUnit) where T : unmanaged
+        {
+            var dataSize = (double)GetNumElements() * sizeof(T);
+            switch (dataMeasurementUnit)
+            {
+                case DataMeasurementUnit.Bytes:
+                    return dataSize;
+                case DataMeasurementUnit.KBytes:
+                    return dataSize / 1024;
+                case DataMeasurementUnit.MBytes:
+                    return dataSize / 1024/1024;
+                case DataMeasurementUnit.GBytes:
+                    return dataSize / 1024/1024/1024;
+                default:
+                    throw new Exception("Несуществующий элемент DataMeasurementUnit");
+            }            
+        }
+
 
         /// <summary>
         /// Возвращает размерность среза трёхмерного массива по указанной плоскости
