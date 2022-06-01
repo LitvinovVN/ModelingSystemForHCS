@@ -145,7 +145,113 @@ namespace ModelingSystemForHCSLibrary.Arrays
             return array;
         }
 
-        
+        /// <summary>
+        /// Возвращает первый срез в плоскости XOY
+        /// </summary>
+        /// <returns></returns>
+        LinearArray2dRAM<T> GetSliceXYFirst()
+        {
+            return GetSlice(PlaneName.XY, 0);
+        }
+
+        /// <summary>
+        /// Возвращает последний срез в плоскости XOY
+        /// </summary>
+        /// <returns></returns>
+        LinearArray2dRAM<T> GetSliceXYLast()
+        {
+            return GetSlice(PlaneName.XY, GetDimentions().Z-1);
+        }
+
+        /// <summary>
+        /// Возвращает первый срез в плоскости XOZ
+        /// </summary>
+        /// <returns></returns>
+        LinearArray2dRAM<T> GetSliceXZFirst()
+        {
+            return GetSlice(PlaneName.XZ, 0);
+        }
+
+        /// <summary>
+        /// Возвращает последний срез в плоскости XOZ
+        /// </summary>
+        /// <returns></returns>
+        LinearArray2dRAM<T> GetSliceXZLast()
+        {
+            return GetSlice(PlaneName.XZ, GetDimentions().Y - 1);
+        }
+
+        /// <summary>
+        /// Возвращает первый срез в плоскости YOZ
+        /// </summary>
+        /// <returns></returns>
+        LinearArray2dRAM<T> GetSliceYZFirst()
+        {
+            return GetSlice(PlaneName.YZ, 0);
+        }
+
+        /// <summary>
+        /// Возвращает последний срез в плоскости XOZ
+        /// </summary>
+        /// <returns></returns>
+        LinearArray2dRAM<T> GetSliceYZLast()
+        {
+            return GetSlice(PlaneName.YZ, GetDimentions().X - 1);
+        }
+
+        /// <summary>
+        /// Записывает данные в первый срез в плоскости XOY
+        /// </summary>
+        /// <returns></returns>
+        void SetSliceXYFirst(LinearArray2dRAM<T> linearArray2D)
+        {            
+            SetSlice(PlaneName.XY, 0, linearArray2D);
+        }
+
+        /// <summary>
+        /// Записывает данные в последний срез в плоскости XOY
+        /// </summary>
+        /// <returns></returns>
+        void SetSliceXYLast(LinearArray2dRAM<T> linearArray2D)
+        {
+            SetSlice(PlaneName.XY, GetDimentions().Z-1, linearArray2D);
+        }
+
+        // <summary>
+        /// Записывает данные в первый срез в плоскости XOZ
+        /// </summary>
+        /// <returns></returns>
+        void SetSliceXZFirst(LinearArray2dRAM<T> linearArray2D)
+        {
+            SetSlice(PlaneName.XZ, 0, linearArray2D);
+        }
+
+        /// <summary>
+        /// Записывает данные в последний срез в плоскости XOZ
+        /// </summary>
+        /// <returns></returns>
+        void SetSliceXZLast(LinearArray2dRAM<T> linearArray2D)
+        {
+            SetSlice(PlaneName.XZ, GetDimentions().Y - 1, linearArray2D);
+        }
+
+        // <summary>
+        /// Записывает данные в первый срез в плоскости YOZ
+        /// </summary>
+        /// <returns></returns>
+        void SetSliceYZFirst(LinearArray2dRAM<T> linearArray2D)
+        {
+            SetSlice(PlaneName.YZ, 0, linearArray2D);
+        }
+
+        /// <summary>
+        /// Записывает данные в последний срез в плоскости YOZ
+        /// </summary>
+        /// <returns></returns>
+        void SetSliceYZLast(LinearArray2dRAM<T> linearArray2D)
+        {
+            SetSlice(PlaneName.YZ, GetDimentions().X - 1, linearArray2D);
+        }
 
         /// <summary>
         /// Записывает двумерный массив по указанной плоскости planeName

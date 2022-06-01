@@ -261,7 +261,6 @@ namespace ModelingSystemForHCSLibraryTests
             }
         }
 
-
         /// <summary>
         /// Тест для проверки генерирования исключения при несоответствии размерностей
         /// </summary>
@@ -441,6 +440,262 @@ namespace ModelingSystemForHCSLibraryTests
 
             array1.SetSlice(PlaneName.YZ, 3, arrayExpected);
             var arrayFact = array1.GetSlice(PlaneName.YZ, 3);
+
+            for (int k = 0; k < arrayExpected.GetDimentions().N2; k++)
+            {
+                for (int j = 0; j < arrayExpected.GetDimentions().N1; j++)
+                {
+                    Assert.Equal(arrayExpected.GetValue(j, k), arrayFact.GetValue(j, k));
+                }
+            }
+        }
+
+        /// <summary>
+        /// Тест для проверки считывания первого среза-плоскости XOY
+        /// </summary>
+        [Fact]
+        public void TestGetSliceXYFirst()
+        {
+            ILinearArray3D<double> array1 = new LinearArray3dRAM<double>(data);
+            var sliceData = new double[,] { { 1, 2, 3, 4 }, { 5, 6, 7, 8 } };
+            var arrayExpected = new LinearArray2dRAM<double>(sliceData);
+
+            array1.SetSlice(PlaneName.XY, 0, arrayExpected);
+            var arrayFact = array1.GetSliceXYFirst();
+
+            for (int j = 0; j < arrayExpected.GetDimentions().N2; j++)
+            {
+                for (int i = 0; i < arrayExpected.GetDimentions().N1; i++)
+                {
+                    Assert.Equal(arrayExpected.GetValue(i, j), arrayFact.GetValue(i, j));
+                }
+            }
+        }
+
+        /// <summary>
+        /// Тест для проверки считывания последнего среза слоя-плоскости XOY
+        /// </summary>
+        [Fact]
+        public void TestGetSliceXYLast()
+        {
+            ILinearArray3D<double> array1 = new LinearArray3dRAM<double>(data);
+            var sliceData = new double[,] { { 17, 18, 19, 20 }, { 21, 22, 23, 24 } };
+            var arrayExpected = new LinearArray2dRAM<double>(sliceData);
+
+            array1.SetSlice(PlaneName.XY, 1, arrayExpected);
+            var arrayFact = array1.GetSliceXYLast();
+
+            for (int j = 0; j < arrayExpected.GetDimentions().N2; j++)
+            {
+                for (int i = 0; i < arrayExpected.GetDimentions().N1; i++)
+                {
+                    Assert.Equal(arrayExpected.GetValue(i, j), arrayFact.GetValue(i, j));
+                }
+            }
+        }
+
+        /// <summary>
+        /// Тест для проверки считывания первого среза-плоскости XOZ
+        /// </summary>
+        [Fact]
+        public void TestGetSliceXZFirst()
+        {
+            ILinearArray3D<double> array1 = new LinearArray3dRAM<double>(data);
+            var sliceData = new double[,] { { 1, 2, 3, 4 }, { 9, 10, 11, 12 }, { 17, 18, 19, 20 } };
+            var arrayExpected = new LinearArray2dRAM<double>(sliceData);
+            var arrayFact = array1.GetSliceXZFirst();
+
+            for (int k = 0; k < arrayExpected.GetDimentions().N2; k++)
+            {
+                for (int i = 0; i < arrayExpected.GetDimentions().N1; i++)
+                {
+                    Assert.Equal(arrayExpected.GetValue(i, k), arrayFact.GetValue(i, k));
+                }
+            }
+        }
+
+        /// <summary>
+        /// Тест для проверки считывания последнего среза слоя-плоскости XOZ
+        /// </summary>
+        [Fact]
+        public void TestGetSliceXZLast()
+        {
+            ILinearArray3D<double> array1 = new LinearArray3dRAM<double>(data);
+            var sliceData = new double[,] { { 5, 6, 7, 8 }, { 13, 14, 15, 16 }, { 21, 22, 23, 24 } };
+            var arrayExpected = new LinearArray2dRAM<double>(sliceData);
+            var arrayFact = array1.GetSliceXZLast();
+
+            for (int k = 0; k < arrayExpected.GetDimentions().N2; k++)
+            {
+                for (int i = 0; i < arrayExpected.GetDimentions().N1; i++)
+                {
+                    Assert.Equal(arrayExpected.GetValue(i, k), arrayFact.GetValue(i, k));
+                }
+            }
+        }
+
+        /// <summary>
+        /// Тест для проверки считывания первого среза-плоскости YOZ
+        /// </summary>
+        [Fact]
+        public void TestGetSliceYZFirst()
+        {
+            ILinearArray3D<double> array1 = new LinearArray3dRAM<double>(data);
+            var sliceData = new double[,] { { 1, 5 }, { 9, 13 }, { 17, 21 } };
+            var arrayExpected = new LinearArray2dRAM<double>(sliceData);
+            var arrayFact = array1.GetSliceYZFirst();
+
+            for (int k = 0; k < arrayExpected.GetDimentions().N2; k++)
+            {
+                for (int j = 0; j < arrayExpected.GetDimentions().N1; j++)
+                {
+                    Assert.Equal(arrayExpected.GetValue(j, k), arrayFact.GetValue(j, k));
+                }
+            }
+        }
+
+        /// <summary>
+        /// Тест для проверки считывания последнего среза слоя-плоскости YOZ
+        /// </summary>
+        [Fact]
+        public void TestGetSliceYZLast()
+        {
+            ILinearArray3D<double> array1 = new LinearArray3dRAM<double>(data);
+            var sliceData = new double[,] { { 4, 8 }, { 12, 16 }, { 20, 24 } };
+            var arrayExpected = new LinearArray2dRAM<double>(sliceData);
+            var arrayFact = array1.GetSliceYZLast();
+
+            for (int k = 0; k < arrayExpected.GetDimentions().N2; k++)
+            {
+                for (int j = 0; j < arrayExpected.GetDimentions().N1; j++)
+                {
+                    Assert.Equal(arrayExpected.GetValue(j, k), arrayFact.GetValue(j, k));
+                }
+            }
+        }
+
+        /// <summary>
+        /// Тест для установки первого среза слоя-плоскости XOY
+        /// </summary>
+        [Fact]
+        public void TestSetSliceXYFirst()
+        {
+            ILinearArray3D<double> array1 = new LinearArray3dRAM<double>(data);
+            var sliceData = new double[,] { { 11, 22, 33, 44 }, { 55, 66, 77, 88 } };
+            var arrayExpected = new LinearArray2dRAM<double>(sliceData);
+
+            array1.SetSliceXYFirst(arrayExpected);
+            var arrayFact = array1.GetSliceXYFirst();
+
+            for (int j = 0; j < arrayExpected.GetDimentions().N2; j++)
+            {
+                for (int i = 0; i < arrayExpected.GetDimentions().N1; i++)
+                {
+                    Assert.Equal(arrayExpected.GetValue(i, j), arrayFact.GetValue(i, j));
+                }
+            }
+        }
+
+        /// <summary>
+        /// Тест для установки последнего среза слоя-плоскости XOY
+        /// </summary>
+        [Fact]
+        public void TestSetSliceXYLast()
+        {
+            ILinearArray3D<double> array1 = new LinearArray3dRAM<double>(data);
+            var sliceData = new double[,] { { 177, 188, 199, 200 }, { 211, 222, 233, 244 } };
+            var arrayExpected = new LinearArray2dRAM<double>(sliceData);
+
+            array1.SetSliceXYLast(arrayExpected);
+            var arrayFact = array1.GetSliceXYLast();
+
+            for (int j = 0; j < arrayExpected.GetDimentions().N2; j++)
+            {
+                for (int i = 0; i < arrayExpected.GetDimentions().N1; i++)
+                {
+                    Assert.Equal(arrayExpected.GetValue(i, j), arrayFact.GetValue(i, j));
+                }
+            }
+        }
+
+        /// <summary>
+        /// Тест для установки первого среза слоя-плоскости XOZ
+        /// </summary>
+        [Fact]
+        public void TestSetSliceXZFirst()
+        {
+            ILinearArray3D<double> array1 = new LinearArray3dRAM<double>(data);
+            var sliceData = new double[,] { { 11, 22, 33, 44 }, { 99, 100, 111, 122 }, { 177, 188, 199, 200 } };
+            var arrayExpected = new LinearArray2dRAM<double>(sliceData);
+
+            array1.SetSliceXZFirst(arrayExpected);
+            var arrayFact = array1.GetSliceXZFirst();
+
+            for (int k = 0; k < arrayExpected.GetDimentions().N2; k++)
+            {
+                for (int i = 0; i < arrayExpected.GetDimentions().N1; i++)
+                {
+                    Assert.Equal(arrayExpected.GetValue(i, k), arrayFact.GetValue(i, k));
+                }
+            }
+        }
+
+        /// <summary>
+        /// Тест для установки последнего среза слоя-плоскости XOZ
+        /// </summary>
+        [Fact]
+        public void TestSetSliceXZLast()
+        {
+            ILinearArray3D<double> array1 = new LinearArray3dRAM<double>(data);
+            var sliceData = new double[,] { { 55, 66, 77, 88 }, { 133, 144, 155, 166 }, { 211, 222, 233, 244 } };
+            var arrayExpected = new LinearArray2dRAM<double>(sliceData);
+
+            array1.SetSliceXZLast(arrayExpected);
+            var arrayFact = array1.GetSliceXZLast();
+
+            for (int k = 0; k < arrayExpected.GetDimentions().N2; k++)
+            {
+                for (int i = 0; i < arrayExpected.GetDimentions().N1; i++)
+                {
+                    Assert.Equal(arrayExpected.GetValue(i, k), arrayFact.GetValue(i, k));
+                }
+            }
+        }
+
+        /// <summary>
+        /// Тест для установки первого среза слоя-плоскости YOZ
+        /// </summary>
+        [Fact]
+        public void TestSetSliceYZFirst()
+        {
+            ILinearArray3D<double> array1 = new LinearArray3dRAM<double>(data);
+            var sliceData = new double[,] { { 11, 55 }, { 99, 133 }, { 177, 211 } };
+            var arrayExpected = new LinearArray2dRAM<double>(sliceData);
+
+            array1.SetSliceYZFirst(arrayExpected);
+            var arrayFact = array1.GetSliceYZFirst();
+
+            for (int k = 0; k < arrayExpected.GetDimentions().N2; k++)
+            {
+                for (int j = 0; j < arrayExpected.GetDimentions().N1; j++)
+                {
+                    Assert.Equal(arrayExpected.GetValue(j, k), arrayFact.GetValue(j, k));
+                }
+            }
+        }
+
+        /// <summary>
+        /// Тест для установки последнего среза слоя-плоскости YOZ
+        /// </summary>
+        [Fact]
+        public void TestSetSliceYZLast()
+        {
+            ILinearArray3D<double> array1 = new LinearArray3dRAM<double>(data);
+            var sliceData = new double[,] { { 44, 88 }, { 122, 166 }, { 200, 244 } };
+            var arrayExpected = new LinearArray2dRAM<double>(sliceData);
+
+            array1.SetSliceYZLast(arrayExpected);
+            var arrayFact = array1.GetSliceYZLast();
 
             for (int k = 0; k < arrayExpected.GetDimentions().N2; k++)
             {
