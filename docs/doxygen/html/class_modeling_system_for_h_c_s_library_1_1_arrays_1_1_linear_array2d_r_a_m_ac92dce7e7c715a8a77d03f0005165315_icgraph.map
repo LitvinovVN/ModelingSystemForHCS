@@ -1,0 +1,4 @@
+<map id="ModelingSystemForHCSLibrary.Arrays.LinearArray2dRAM.GetDimentions" name="ModelingSystemForHCSLibrary.Arrays.LinearArray2dRAM.GetDimentions">
+<area shape="rect" id="node1" title="Возвращает размерность двумерного массива" alt="" coords="261,5,524,47"/>
+<area shape="rect" id="node2" href="$interface_modeling_system_for_h_c_s_library_1_1_arrays_1_1_i_linear_array3_d.html#a87064f963d1b43f0ff24207cffcc66b8" title="Записывает двумерный массив по указанной плоскости planeName и номеру среза sliceNumber" alt="" coords="5,5,213,47"/>
+</map>

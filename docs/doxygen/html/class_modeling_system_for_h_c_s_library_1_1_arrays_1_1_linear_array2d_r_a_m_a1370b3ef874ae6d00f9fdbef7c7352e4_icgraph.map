@@ -1,4 +1,4 @@
 <map id="ModelingSystemForHCSLibrary.Arrays.LinearArray2dRAM.SetValue" name="ModelingSystemForHCSLibrary.Arrays.LinearArray2dRAM.SetValue">
 <area shape="rect" id="node1" title="Записывает в элемент массива с заданными координатами значение value" alt="" coords="261,5,492,47"/>
-<area shape="rect" id="node2" href="$interface_modeling_system_for_h_c_s_library_1_1_arrays_1_1_i_linear_array3_d.html#a763a3b31f79522389425a60283a0015c" title="Возвращает двумерный массив по указанной плоскости planName и номеру среза sliceNumber" alt="" coords="5,5,213,47"/>
+<area shape="rect" id="node2" href="$interface_modeling_system_for_h_c_s_library_1_1_arrays_1_1_i_linear_array3_d.html#a763a3b31f79522389425a60283a0015c" title="Возвращает двумерный массив по указанной плоскости planeName и номеру среза sliceNumber" alt="" coords="5,5,213,47"/>
 </map>

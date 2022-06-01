@@ -1,6 +1,8 @@
 <map id="ModelingSystemForHCSLibrary.Arrays.ILinearArray3D.GetDimentions" name="ModelingSystemForHCSLibrary.Arrays.ILinearArray3D.GetDimentions">
-<area shape="rect" id="node1" title="Возвращает размерность трёхмерного массива" alt="" coords="584,46,823,87"/>
-<area shape="rect" id="node2" href="$interface_modeling_system_for_h_c_s_library_1_1_arrays_1_1_i_linear_array3_d.html#aa0507f3359efaf39e2626ac9aaf4bea6" title="Возвращает количество элементов трёхмерного массива" alt="" coords="280,13,536,54"/>
-<area shape="rect" id="node4" href="$interface_modeling_system_for_h_c_s_library_1_1_arrays_1_1_i_linear_array3_d.html#a763a3b31f79522389425a60283a0015c" title="Возвращает двумерный массив по указанной плоскости planName и номеру среза sliceNumber" alt="" coords="304,78,512,119"/>
-<area shape="rect" id="node3" href="$interface_modeling_system_for_h_c_s_library_1_1_arrays_1_1_i_linear_array3_d.html#aa2cc5515d806c4f48d9f6b038836479b" title="Возвращает размер объекта в Mb" alt="" coords="5,5,232,61"/>
+<area shape="rect" id="node1" title="Возвращает размерность трёхмерного массива" alt="" coords="584,108,823,149"/>
+<area shape="rect" id="node2" href="$interface_modeling_system_for_h_c_s_library_1_1_arrays_1_1_i_linear_array3_d.html#a317aa1cb495817a4cbd852f42e08bbcd" title="Возвращает размерность среза трёхмерного массива по указанной плоскости" alt="" coords="287,63,529,119"/>
+<area shape="rect" id="node5" href="$interface_modeling_system_for_h_c_s_library_1_1_arrays_1_1_i_linear_array3_d.html#aa0507f3359efaf39e2626ac9aaf4bea6" title="Возвращает количество элементов трёхмерного массива" alt="" coords="280,144,536,185"/>
+<area shape="rect" id="node3" href="$interface_modeling_system_for_h_c_s_library_1_1_arrays_1_1_i_linear_array3_d.html#a763a3b31f79522389425a60283a0015c" title="Возвращает двумерный массив по указанной плоскости planeName и номеру среза sliceNumber" alt="" coords="15,5,223,47"/>
+<area shape="rect" id="node4" href="$interface_modeling_system_for_h_c_s_library_1_1_arrays_1_1_i_linear_array3_d.html#a87064f963d1b43f0ff24207cffcc66b8" title="Записывает двумерный массив по указанной плоскости planeName и номеру среза sliceNumber" alt="" coords="15,71,223,112"/>
+<area shape="rect" id="node6" href="$interface_modeling_system_for_h_c_s_library_1_1_arrays_1_1_i_linear_array3_d.html#aa2cc5515d806c4f48d9f6b038836479b" title="Возвращает размер объекта в Mb" alt="" coords="5,137,232,193"/>
 </map>

@@ -1,0 +1,8 @@
+<map id="ModelingSystemForHCSLibrary.Arrays.ILinearArray3D.SetSlice" name="ModelingSystemForHCSLibrary.Arrays.ILinearArray3D.SetSlice">
+<area shape="rect" id="node1" title="Записывает двумерный массив по указанной плоскости planeName и номеру среза sliceNumber" alt="" coords="5,119,213,161"/>
+<area shape="rect" id="node2" href="$interface_modeling_system_for_h_c_s_library_1_1_arrays_1_1_i_linear_array3_d.html#a317aa1cb495817a4cbd852f42e08bbcd" title="Возвращает размерность среза трёхмерного массива по указанной плоскости" alt="" coords="271,5,514,61"/>
+<area shape="rect" id="node4" href="$class_modeling_system_for_h_c_s_library_1_1_arrays_1_1_linear_array2d_r_a_m.html#ac92dce7e7c715a8a77d03f0005165315" title="Возвращает размерность двумерного массива" alt="" coords="261,86,524,127"/>
+<area shape="rect" id="node5" href="$class_modeling_system_for_h_c_s_library_1_1_arrays_1_1_linear_array2d_r_a_m.html#af816d00df07c49faa58ad5100c4fa4e9" title="Возвращает элемент двумерного массива по заданным координатам" alt="" coords="277,151,508,193"/>
+<area shape="rect" id="node6" href="$interface_modeling_system_for_h_c_s_library_1_1_arrays_1_1_i_linear_array3_d.html#a95a9223ab186c79cd30a84cf22fe845c" title="Записывает в элемент массива с заданными координатами значение value" alt="" coords="289,217,497,258"/>
+<area shape="rect" id="node3" href="$interface_modeling_system_for_h_c_s_library_1_1_arrays_1_1_i_linear_array3_d.html#affb74acb24964d415b3d7a34521cfbf6" title="Возвращает размерность трёхмерного массива" alt="" coords="572,13,811,54"/>
+</map>
